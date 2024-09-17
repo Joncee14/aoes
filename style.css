@@ -1,0 +1,387 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('./images/pexels-freestockpro-2166553.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-block-start: 20px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+
+
+nav {
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    position: sticky;
+    z-index: 1000;
+    top: 20px;
+    width: 100%;
+    
+    
+
+
+
+    ul > li {
+        list-style: none;
+        display: none;
+        margin-inline: 5px;
+
+    }
+
+
+    span {
+        display: block;
+        border: 2px solid rgb(212, 211, 211);
+        padding: 3px 5px;
+        border-radius: 5px;
+        font-size: larger;
+        cursor: pointer;
+    }
+
+}
+
+
+.navbar li {
+    margin-inline: 20px;
+
+    a {
+        color: rgb(161, 159, 159);
+    }
+}
+
+li:first-child a {
+    color: rgb(43, 40, 40);
+}
+
+.navbar li a:hover {
+    color: black;
+    transition: all 1.2s ease-in;
+
+}
+
+@media (min-width:768px){
+
+    nav ul li {
+        display: inline;
+    }
+
+   nav span{
+        display: none;
+    }
+    
+
+}
+
+.mobile-nav {
+    display: none;
+    position: absolute;
+    top: 0;
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+    margin: 0 auto;
+
+    span {
+        display: block;
+        float: right;
+        margin: 20px 20px 10px;
+        border: 2px solid rgb(212, 211, 211);
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: larger;
+        cursor: pointer;
+    }
+
+    .navbar {
+        list-style: none;
+        padding: 20px 0;
+        margin-top: 60px;
+       
+
+
+
+        a {
+            display: block;
+            padding: 5px;
+
+        }
+
+        a:hover {
+            transition: all 1.2s ease-in;
+            color: white;
+            background-color: gray;
+        }
+    }
+
+
+    .action-btn{
+        width: 85%;
+        margin: 0 auto;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+
+header {
+    width: 90%;
+    margin: 20px auto;
+    padding: 10px;
+    color: white;
+
+    h1 {
+        line-height: 1.1;
+    }
+
+    p {
+        margin-block: 10px;
+    }
+
+    button {
+        border: none;
+        background-color: blue;
+        color: white;
+        border-radius: 20px;
+        padding: 10px 20px;
+    }
+}
+
+.action-btn li:last-child a {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+
+.latest-arrivals {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+        font-size: 1.5rem;
+        color: white;
+        margin-block-end: 5px;
+    }
+}
+
+.article-content {
+
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+   
+
+    article {
+        /* width: 25% ; */
+        position: relative;
+        width: 288px;
+        height: 234px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px;
+        overflow: hidden;
+        margin-bottom: 50px;
+        z-index: 1;
+    }
+}
+
+.badge {
+    position: absolute;
+    font-size: 12px;
+    top: 0;
+    left: 0;
+    text-transform: capitalize;
+    background-color: blue;
+    color: white;
+    padding: 5px 20px;
+}
+
+article img {
+    max-width: 100%;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+
+.article-title {
+    font-weight: 700;
+}
+
+.article-desc {
+    font-size: 12px;
+}
+
+.article-price {
+    color: blue;
+    float: right;
+    font-weight: 600;
+}
+
+.article-btn {
+    margin-top: 5px;
+    all: unset;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button .arr {
+    margin-inline-start: 5px;
+}
+
+
+@media(max-width:728px){
+nav{
+    h2.logo{
+        font-size: 16px;
+    }
+    ul{
+        width: 100px;
+    }
+    ul.action-btn{
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+    
+    height: fit-content;
+}
+ul li a.s-b{
+    padding: 5px;
+    font-size: 10px;
+    
+}
+header{
+    h1{
+        line-height: 1.0;
+        font-size: 20px;
+    }
+    p{
+        line-height: 1.0;
+        font-size: small;
+    }
+    button{
+        padding: 5px;
+        font-size: 10px;
+    }
+}
+div.article-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    article{
+        width: 100%;
+        height: 100%;
+
+        span.article-title{
+            font-size: 10px;
+        }
+        span.article-price{
+            font-size: 10px;
+        }
+        button{
+            font-size: 10px;
+        }
+    }
+
+}
+.container {
+    width: 100%;
+    height: 100%;
+    background-image: url('./images/pexels-freestockpro-2166553.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-block-start: 20px;
+}
+
+}
+
+footer p{
+    /* border: 1px solid black; */
+    padding: 15px;
+    background-color: blue;
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-size: 0.86rem;
+}
+
+.back2top {
+    /* border: 1px solid black; */
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 10px;
+    bottom: 55px;
+    border-radius: 50%;
+    background-color: blue;
+    z-index: 100;
+    font-size: x-large;
+   
+    .arrow {
+        color: white;
+    }
+   
+}
+
+@media (min-width:396px) and (max-width:768px) {
+    .article-content {
+        display: grid;
+        grid-template-columns: auto auto;
+        /* grid-template-rows: auto auto; */
+    }
+
+    header h1{
+        font-size: 50px;
+}
+
+header p {
+    font-size: 20px;
+}
+
+header button {
+    padding: 18px;
+    font-size: 15px;
+}
+
+/* @media (min-width:572px) {
+    .article-content {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+} */
+}
